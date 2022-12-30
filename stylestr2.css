@@ -1,0 +1,304 @@
+body{
+    font-family: "Montserrat Regular";
+    margin:0;
+    margin-top: -20px;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+}
+
+.header
+{
+    padding-right: 5px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+/*Меню-бургер*/
+.menu-btn
+{
+    margin-top:-13px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 5px;;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+   
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after 
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .5s;
+}
+.menu-btn > span::before 
+{
+    content: '';
+    top: -8px;
+}
+.menu-btn > span::after 
+{
+    content: '';
+    top: 8px;
+}
+.menubox
+{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 0px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .5s;
+}
+.labl
+{
+    padding: 0px 0 0 25px;
+}
+.menu-item
+{
+    display: flex;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+.menu-item:hover 
+{
+    background-color: #CFD8DC;
+}
+#menu-toggle
+{
+    opacity: 0;
+}
+#menu-toggle:checked ~ .menu-btn > span
+{
+    transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before
+{
+    top: 0;
+    transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after
+{
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox
+{
+    visibility: visible;
+    left: 0;
+}
+
+
+   
+@media screen and (max-width: 1000px){
+    .menu-btn
+    {
+        right: 50px;
+    }
+    
+}
+
+
+
+.html {
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+    padding: 20px 0;
+  }
+  .stat {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    color:bisque;
+    text-shadow: 1px 1px 1px #616161;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+  .band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    
+    display: grid;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    
+  }
+  
+  .card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+  }  
+    a:hover {
+      top: -2px;
+      box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    }
+    
+    article {
+      padding: 20px;
+      flex: 1;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #333;
+    }
+    
+    p {
+      flex: 1;
+      line-height: 1.4;
+    }
+    
+    span {
+      font-size: 12px;
+      font-weight: bold;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin: 2em 0 0 0;
+    }
+    
+    .thumb {
+      padding-bottom: 60%;
+      background-size: cover;
+      background-position: center center;
+    }
+  
+  
+    @media (min-width: 60em) {
+    .item-1 {
+      grid-column: 1 / span 2;}
+    .item-1 h1
+      {
+        font-size: 24px;}}
+    @media (min-width: 30em) {
+        .band{
+        grid-template-columns: 1fr 1fr;}}
+    @media (min-width: 60em) {
+        .band{
+        grid-template-columns: repeat(4, 1fr);}}
+    @media only screen and (max-width: 320px) {
+        .imageBox {
+         height: 270px;
+        }
+        .imageBox h3 {
+         font-size: 1.1rem;
+         top: 45%;}}
+    @media only screen and (max-width: 480px) {
+        .dws-wrapper {
+         margin-top: 20px;
+        }
+        .imageBox {
+         height: 370px;
+        }
+        .imageBox h3 {
+         font-size: 1.4rem;
+         top: 47%;}}
+
+  .pr10
+  {
+    margin-left: 560px;
+    color: white;
+    font-size: 20px;
+  }
+  .knop
+  {
+    margin-left: 580px
+}
+#result {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.buttons {
+	text-align: center;
+}
+
+.pr101
+{
+    margin-top: 20px;
+    margin-left: 560px
+}
+  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+  .nizf {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 100px;
+      background: linear-gradient(to right, #aaaaaa, #cacaca);
+  }
+  footer{
+      position: relative;
+      width: 100%;
+      padding: 20px 50px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .social{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      flex-wrap: wrap;
+  }
+  .social li{
+      list-style: none;
+  }
+  .social li a {
+      font-size: 2em;
+      color: #fff;
+      margin: 0 10px;
+      display: inline-block;
+      transition: 0.5s;
+  }
+  .social li a:hover
+  {
+      color:bisque;
+  }
+  footer p {
+      color: #fff;
+      text-align: center;
+      margin-top: 15px;
+      font-size: 1.1em;
+  }    

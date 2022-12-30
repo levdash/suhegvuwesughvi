@@ -1,0 +1,778 @@
+body{
+    margin: 0;
+    font-family: "Montserrat Regular";
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5
+{
+    margin: 0;
+}
+/*Контейнер*/
+.containerr {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    color: white;
+}
+/*Интро*/
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: 
+    url("html/fontrue.jpg") center
+    no-repeat;
+    background-size: cover;
+}
+.intro__inner
+{
+    color: whitesmoke;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+.intro__nadtitle
+{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    color: bisque;
+    text-shadow: 1px 1px 1px #616161;
+    text-align: center;
+}
+.intro__title
+{
+    font-size: 30px;
+    font-weight: 650;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+
+}
+/*Шапка*/
+.header
+{
+    padding-top: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+/*Меню-бургер*/
+.menu-btn
+{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 8px;;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+   
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after 
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+.menu-btn > span::before 
+{
+    content: '';
+    top: -8px;
+}
+.menu-btn > span::after 
+{
+    content: '';
+    top: 8px;
+}
+.menubox
+{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 0px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+}
+.labl
+{
+    padding: 15px 0 0 25px;
+}
+.menu-item
+{
+    display: flex;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+.menu-item:hover 
+{
+    background-color: #CFD8DC;
+}
+#menu-toggle
+{
+    opacity: 0;
+}
+#menu-toggle:checked ~ .menu-btn > span
+{
+    transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before
+{
+    top: 0;
+    transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after
+{
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox
+{
+    visibility: visible;
+    left: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .dws-wrapper {
+     margin-top: 20px;
+    }
+    .imageBox {
+     height: 370px;
+    }
+    .imageBox h3 {
+     font-size: 1.4rem;
+     top: 47%;
+    }
+}
+   
+@media only screen and (max-width: 320px) {
+    .imageBox {
+     height: 270px;
+    }
+    .imageBox h3 {
+     font-size: 1.1rem;
+     top: 45%;
+    }
+}
+
+
+/*Продолжение страницы*/
+.container2
+{
+    color: white;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    text-align: left;
+    padding: 20px;
+}
+.ramka
+{
+    border: 3px solid bisque;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+}
+.zag
+{
+    font-size: 30px;
+    padding-top: 55px;
+    padding-left: 85px;
+}
+.sod
+{
+    padding: 20px 0 20px 100px;
+    font-size: medium;
+}
+
+.razm
+{
+    padding-bottom: 15px;
+    font-size: 20px;
+    transition: .5s;
+}
+.razm:hover
+{
+    transform: scale(1.01);
+}
+.sod_dec
+{
+    color: white;
+    text-decoration: none;
+    transition: .5s;
+}
+.sod_dec:hover
+{
+   color: bisque;
+}
+.phsod
+{
+    padding-right: 80px;
+    padding-top: 10px;
+    max-width: 100%;
+}
+.textzav
+{
+    font-size: 20px;
+    padding-left: 80px;
+}
+/*Типы кожи*/
+
+.kozhatype{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    align-items: center;
+}
+
+.zag1
+{
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    font-size: 30px;
+    color: white;
+}
+
+.container{
+    max-width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: bisque;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 200px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #616161;
+    text-align: center;
+    font-size: 15px;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+.texttype
+{
+    font-size: 20px;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    padding: 0 100px 90px 100px;
+    color: white;
+}
+
+@media only screen and (max-width: 768px){
+    .container
+    {
+        display: block;
+    }
+}
+
+
+.zag2
+{
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    font-size: 30px;
+    color: white;
+}
+
+.container3
+{
+    color: white;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    padding: 20px 20px 40px 20px;
+}
+.zag3
+{
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 70px;
+}
+.phsteps
+{
+    margin-right: 40px;
+    margin-top: 10px;
+    max-width: 100%;
+    margin-right: 50px;
+    box-shadow: 5px 5px 20px #616161;
+}
+
+.steps
+{
+    width: 100%;
+    height: auto;
+}
+.stps
+{
+    margin-left: 90px;
+    padding-top: 40px;
+}
+
+.razm1
+{
+    padding-bottom: 27px;
+    font-size: 18px;
+}
+
+.ochish,
+.toniz,
+.otshel
+{
+    padding: 0 70px 0 70px;
+    font-size: 20px;
+}
+.smth
+{
+    padding: 0 70px 0 70px;
+    font-size: 20px;
+}
+.moister
+{
+    font-size: 20px;
+}
+
+.t1,
+.t2,
+.t3,
+.t4
+{
+    color: beige;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 25px;
+}
+.t3
+{
+    padding-left: 70px;
+}
+.spis1
+{
+    margin-left: 90px;
+}
+.spisa1
+{
+    margin-top: 20px;
+   margin-left: 15px;
+}
+.spis2
+{
+    margin-left: 320px;
+}
+
+.m1,
+.m2,
+.m3,
+.m4
+{
+    padding-left: 70px;
+}
+@media only screen and (max-width: 700px){
+    .lf_ph2
+    {
+        float: none;
+    }
+}
+@media only screen and (max-width: 700px){
+    .spis2
+    {
+        margin-left: 70px;
+    }
+}
+
+.lf_ph
+{
+    margin-right: 30px;
+    margin-top: 10px;
+    max-width: 100%;
+    box-shadow: -5px 5px 20px #616161;
+}
+.rg_ph
+{
+    margin-left: 70px;
+    margin-right: 60px;
+    margin-top: 10px;
+    max-width: 100%;
+    box-shadow: 5px 5px 20px #616161;
+}
+.lf_ph2
+{
+    margin-right: 30px;
+    margin-left: 70px;
+    margin-top: 10px;
+    max-width: 100%;
+    box-shadow: -5px 5px 20px #616161;
+}
+.rg_ph2
+{
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+    max-width: 100%;
+    box-shadow: 5px 5px 20px #616161;
+}
+.rg_pha2
+{
+    margin-right: 30px;
+    margin-top: 10px;
+    max-width: 100%;
+    box-shadow: 5px 5px 20px #616161;
+}
+.zag4
+{
+    padding-top: 60px;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    font-size: 30px;
+    color: white;
+}
+.zag5
+{
+    padding-top: 60px;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    font-size: 30px;
+    color: beige;
+    text-shadow: 1px 1px 1px #616161;
+}
+.uv,
+.cr
+{
+    padding-left: 70px;
+    color: beige;
+}
+
+.container4
+{
+    color: white;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    padding: 20px 20px 40px 20px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.nizf {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100px;
+}
+footer{
+    position: relative;
+    width: 100%;
+    padding: 20px 50px;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.social{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.social li{
+    list-style: none;
+}
+.social li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.social li a:hover
+{
+    color:bisque;
+}
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+}    
+.pr13
+{
+    text-align: center;
+    font-size: 25px;
+    color: beige;
+    text-decoration: none;
+}
+.pr131
+{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.body13 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  #largeImg {
+    width: 550px;
+    height: 400px;
+    margin-left: 400px;
+    padding-top: 20px;
+  }
+  
+  #thumbs a {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    padding-left: 10px;
+    float: left;
+  }
+
+  #thumbs img
+  {
+    width: 100px;
+    height: 100px;
+  }
+  #thumbs li {
+    list-style: none;
+  }
+  
+  #thumbs {
+    margin: 0;
+    padding-left: 400px;
+  }
+.pr133
+{
+    margin-top: 110px;
+    margin-left: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+}
+li
+{
+    cursor: pointer;
+}
+.selected {
+    background: antiquewhite;
+  }
+  .slider {
+    border-radius: 5px;
+    background: #E0E0E0;
+    background: linear-gradient(left top, #E0E0E0, #EEEEEE);
+    width: 310px;
+    height: 15px;
+    margin: 30px 0 30px 500px;
+  }
+  
+  .thumb {
+    width: 10px;
+    height: 25px;
+    border-radius: 3px;
+    position: relative;
+    left: 10px;
+    top: -5px;
+    background: beige;
+    cursor: pointer;
+  }
+  #train {
+    position: relative;
+    cursor: pointer;
+  }
+  .poezd
+  {
+    width: 180px;
+    height: 150px;
+}
+
+textarea {
+    display: block;
+    border: 1px solid #BBB;
+    color: #444;
+    font-size: 110%;
+    margin-left: 400px;
+  }
+  
+  button {
+    margin-top: 30px;
+    margin-left: 580px;
+    margin-bottom: 30px;
+  }
+  #storage {
+    width: 50%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+    }
+    th, td:first-child {
+    background: beige;
+    color: white;
+    padding: 10px 20px;
+    }
+    th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+    }
+    td {
+    background: beige;
+    }
+    th:first-child, td:first-child {
+    text-align: left;
+    }
+#cart {
+    width: 50%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+    }
+    th, td:first-child {
+    background: beige;
+    color: black;
+    padding: 10px 20px;
+    }
+    th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+    }
+    td {
+    background: beige;
+    }
+    th:first-child, td:first-child {
+    text-align: left;
+    }   
+/* h2
+{
+    margin-right: 340px;
+    color: beige;
+} */
+.lasttask
+{
+    text-align: center;
+    margin-left: 500px;
+    margin-bottom: 30px;
+}
